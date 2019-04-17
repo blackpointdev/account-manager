@@ -43,7 +43,7 @@ public class Operation {
 
     /**
      * Getter for operation's title
-     * @return Operation's title
+     * @return Operation's titlee
      */
     public String getTitle() {
         return title;
