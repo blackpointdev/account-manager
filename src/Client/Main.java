@@ -1,10 +1,12 @@
 package Client;
 
-import AccountManager.Colour;
-import AccountManager.User;
-
+// Standard modules
 import java.util.ArrayList;
 import java.util.Scanner;
+
+// My modules
+import AccountManager.Colour;
+import AccountManager.User;
 
 public class Main {
     private static void clearScreen() {
