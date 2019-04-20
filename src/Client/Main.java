@@ -1,4 +1,4 @@
-package com.blackpoint.stan_konta;
+package Client;
 
 import AccountManager.Colour;
 import AccountManager.User;
