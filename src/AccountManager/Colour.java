@@ -1,4 +1,4 @@
-package com.blackpoint.stan_konta;
+package AccountManager;
 
 /**
  * Class containing static ANSI colours - used to change colours of text in app

@@ -1,4 +1,4 @@
-package com.blackpoint.stan_konta;
+package AccountManager;
 
 public class UI
 {

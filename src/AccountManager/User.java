@@ -1,4 +1,4 @@
-package com.blackpoint.stan_konta;
+package AccountManager;
 
 import java.io.*;
 import java.math.RoundingMode;

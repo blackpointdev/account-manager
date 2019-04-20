@@ -1,4 +1,4 @@
-package com.blackpoint.stan_konta;
+package AccountManager;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
