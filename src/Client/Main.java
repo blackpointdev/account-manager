@@ -9,7 +9,7 @@ public class Main {
         AccountManager am = new AccountManager();
 
         am.AddUser("marcin", 0);
-        am.AddUser("adam", 0);
+        am.AddUser("rodzice", 0);
 
         am.LoadUsersData();
         am.ListUsersDetails();
