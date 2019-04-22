@@ -7,10 +7,10 @@ import java.util.Calendar;
  * Class representing an operation on bank account. Holds it's title, amount and day, when it was performed.
  * Allows to create new operation, get it's title, amount and date in several formats
  */
-public class Operation {
+class Operation {
     private String title;
     private double amount;
-    Calendar cal;
+    private Calendar cal;
     private String time;
 
     /**
@@ -18,7 +18,7 @@ public class Operation {
      * @param ammount Ammount of operation
      * @param title Title of operation
      */
-    public Operation(double ammount, String title) {
+    Operation(double ammount, String title) {
         this.amount = ammount;
         this.title = title;
 
@@ -34,7 +34,7 @@ public class Operation {
      * @param title Title of operationn
      * @param date Date in format dd.mm.yyyy | HH:MM
      */
-    public Operation(double ammount, String title, String date) {
+    Operation(double ammount, String title, String date) {
         this.amount = ammount;
         this.title = title;
 
@@ -45,7 +45,7 @@ public class Operation {
      * Getter for operation's title
      * @return Operation's title
      */
-    public String getTitle() {
+    String getTitle() {
         return title;
     }
 
@@ -53,7 +53,7 @@ public class Operation {
      * Getter for operation's amount
      * @return Operation's amount
      */
-    public double getAmount() {
+    double getAmount() {
         return amount;
     }
 
@@ -62,7 +62,7 @@ public class Operation {
      * @see #getDate(boolean)
      * @return Operation's date
      */
-    public String getDate() {
+    String getDate() {
         return time;
     }
 
@@ -72,7 +72,7 @@ public class Operation {
      * @see #getDate()
      * @return Formatted date
      */
-    public String getDate(boolean space) {
+    String getDate(boolean space) {
         if (!space) {
             return this.time.replace(" ", "");
         } else {
@@ -84,7 +84,7 @@ public class Operation {
      * Getter for formatted operation's date - dd.mm.yyyy
      * @return Formatted date
      */
-    public String getDay() {
+    String getDay() {
         return this.time.substring(0, 10);
     }
 }

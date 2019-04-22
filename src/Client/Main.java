@@ -15,8 +15,5 @@ public class Main {
         am.ListUsersDetails();
 
         am.InitializeLogin();
-
-
-//        System.out.println(Colour.ANSI_RED + "This text is red!" + Colour.ANSI_RESET);
     }
 }

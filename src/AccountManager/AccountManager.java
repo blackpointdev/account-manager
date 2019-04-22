@@ -3,6 +3,9 @@ package AccountManager;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Main class of AccountManager class. Allows user to interact with whole manager.
+ */
 public class AccountManager {
     private ArrayList<User> Users = new ArrayList<User>();
 

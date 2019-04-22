@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Class representing user's bank account. Holds it's name, balance and list of all operations performed on user's
  * account. Has users counter, incremented with every new user created.
  */
-public class User {
+class User {
     private static int static_id = 0;
     private int id;
     private String name;
@@ -22,7 +22,7 @@ public class User {
      * @param name Name of new user
      * @param balance Balance of new user
      */
-    public User(String name, double balance) {
+    User(String name, double balance) {
         this.name = name;
         this.id = static_id++;
         NewOperation(balance, "Inicjalizacja konta użytkownika " + name);
@@ -34,7 +34,7 @@ public class User {
      * @param ammount Ammount of operation
      * @param title   Title of new operation
      */
-    public void NewOperation(double ammount, String title) {
+    void NewOperation(double ammount, String title) {
         Operations.add(new Operation(ammount, title));
     }
 
@@ -44,14 +44,14 @@ public class User {
      *
      * @param ammount Amount of operation
      */
-    public void NewOperation(double ammount) {
+    void NewOperation(double ammount) {
         Operations.add(new Operation(ammount, "undefined"));
     }
 
     /**
      * Lists all user's operations
      */
-    public void ListOperations() {
+    void ListOperations() {
         for (Operation i : Operations)
             System.out.println(i.getDate() + " | " + i.getAmount() + " | " + i.getTitle());
     }
@@ -61,7 +61,7 @@ public class User {
      *
      * @param lastOperations number of last operations to list
      */
-    public void ListOperations(int lastOperations) {
+    void ListOperations(int lastOperations) {
         for (int i = Operations.size() - 1; lastOperations > 0 && i > 0; i--, lastOperations--)
             System.out.println(Operations.get(i).getDate() + " | " + Operations.get(i).getTitle() + " | " + Operations.get(i).getAmount());
     }
@@ -71,7 +71,7 @@ public class User {
      *
      * @param value date in format "dd.MM.yyyy"
      */
-    public void ListOperations(String value) {
+    void ListOperations(String value) {
         for (Operation i : Operations) {
             if (value.equals(i.getDay()))
                 System.out.println(i.getDate() + " | " + i.getTitle() + " | " + i.getAmount());
@@ -83,7 +83,7 @@ public class User {
      *
      * @return User's account balance
      */
-    public double getBalance() {
+    double getBalance() {
         double balance = 0;
 
         for (Operation tmp : Operations) {
@@ -101,9 +101,9 @@ public class User {
      *
      * @throw IllegalArgumentException If data from file is incorrect
      */
-    public void LoadData() {
+    void LoadData() {
         File f = new File(this.name + ".usr");
-        ArrayList<String> records = new ArrayList<String>();
+        ArrayList<String> records = new ArrayList<>();
 
         try {
             Scanner in = new Scanner(f);
@@ -133,7 +133,7 @@ public class User {
     /**
      * Saves user's operations to file called "username.usr"
      */
-    public void SaveData() {
+    void SaveData() {
         if (!isLoadedCorrectly) {
             System.out.println("Can't save data to file - read from file failed!");
             return;
@@ -165,7 +165,7 @@ public class User {
      *
      * @return User's name
      */
-    public String getName() {
+    String getName() {
         return name;
     }
 }
